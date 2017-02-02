@@ -7,7 +7,7 @@ require("prototypes.recipe")
 require("prototypes.technology")
 
 for name, tree in pairs (data.raw["tree"]) do
-	if not(string.find(name, "dead") or string.find(name, "dry") or string.find(name, "coral") or string.find(name, "stick")) then
+	if not(string.find(name, "dead") or string.find(name, "dry") or string.find(name, "coral") or string.find(name, "stick") or name == "sapling") then
 		tree.minable.result = nil
 		tree.minable.results = {
 			{
