@@ -20,7 +20,7 @@ for name, tree in pairs (data.raw["tree"]) do
 			-- Construction robots won't be able to grab seeds, only manual mining can
 			{
 				type = "item",
-				name = "seed",
+				name = "sapling",
 				amount_min = 2,
 				amount_max = 4,
 				probability = 1
