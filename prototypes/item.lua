@@ -7,6 +7,6 @@ data:extend({
     subgroup = 'raw-material',
     order = 'a[sapling]',
     place_result = 'sapling',
-    stack_size = 10
+    stack_size = 500
   }
 })
