@@ -15,12 +15,12 @@ local tree_types = {
 script.on_event(defines.events.on_built_entity, function(event)
   if event.created_entity.name == 'sapling' then
     --Get a random grow tick
-    local grow_tick = (avg_grow_time or 60*60*5) + math.random(-max_grow_swing, max_grow_swing)
+    local grow_tick = (avg_grow_time or 60*60*5) + math.random(-max_grow_swing, max_grow_swing) + event.tick
     --Get or create the global tick to grow on
     global.growing_times[grow_tick] = global.growing_times[grow_tick] or {}
     --local reference because speed and things
     local sapling = global.growing_times[grow_tick]
-    sapling[#sapling+1] = {entity=event.created_entity}
+    sapling[#sapling+1] = { entity = event.created_entity }
   end
 end)
 
@@ -31,9 +31,9 @@ script.on_event(defines.events.on_tick, function(event)
     --Loop through all saplings ready to grow this tick
     for _, sapling in ipairs(global.growing_times[event.tick]) do
       --If the sapling is still valid then make tree!
-      if sapling and sapling.entity and sapling.valid then
-        local newtree = tree_types[math.random(1,#tree_types)]
-        sapling.entity.surface.create_entity{name=newtree, position = sapling.entity.position}
+      if sapling and sapling.entity and sapling.entity.valid then
+        local newtree = tree_types[math.random(1, #tree_types)]
+        sapling.entity.surface.create_entity{ name=newtree, position = sapling.entity.position }
         sapling.entity.destroy()
       end
     end
