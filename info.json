@@ -3,6 +3,8 @@
   "version": "0.14.2",
   "title": "Simple Saplings",
   "author": "Hypermark",
+  "homepage": "https://forums.factorio.com/viewtopic.php?f=97&t=41199",
   "description": "A simple mod to easily replant forests and create basic wood farms.",
-  "factorio_version": "0.14"
+  "factorio_version": "0.14",
+  "dependencies": ["base >= 0.14.22"]
 }
