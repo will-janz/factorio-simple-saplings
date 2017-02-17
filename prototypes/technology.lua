@@ -2,7 +2,8 @@ data:extend({
   {
     type = 'technology',
     name = 'seed-extraction',
-    icon = '__SimpleSaplings__/graphics/icons/plant-stick.png',
+    icon = '__SimpleSaplings__/graphics/technology/seed-extraction.png',
+    icon_size = 128,
     effects = {
       {
         type = 'unlock-recipe',

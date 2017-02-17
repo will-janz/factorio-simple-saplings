@@ -2,7 +2,7 @@ data:extend({
   {
     type = 'tree',
     name = 'sapling',
-    icon = '__base__/graphics/icons/small-electric-pole.png',
+    icon = '__SimpleSaplings__/graphics/icons/plant-stick.png',
     flags = { 'placeable-neutral', 'breaths-air', 'not-repairable' },
     minable = {
       hardness = 0.1,
