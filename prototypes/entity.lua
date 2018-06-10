@@ -3,6 +3,7 @@ data:extend({
     type = 'tree',
     name = 'sapling',
     icon = '__SimpleSaplings__/graphics/icons/plant-stick.png',
+    icon_size = 32, -- Shrinks
     flags = { 'placeable-neutral', 'breaths-air', 'not-repairable' },
     minable = {
       hardness = 0.1,
@@ -30,8 +31,8 @@ data:extend({
     pictures = {
       filename = '__SimpleSaplings__/graphics/entity/plant-stick.png',
       priority = 'extra-high',
-      width = 123,
-      height = 124,
+      width = 125,
+      height = 125,
       shift = { 0.6, -1.4 }
     }
   }
