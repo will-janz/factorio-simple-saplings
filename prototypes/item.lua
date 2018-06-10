@@ -4,7 +4,7 @@ data:extend({
     name = 'sapling',
     icon = '__SimpleSaplings__/graphics/icons/seed.png',
     icon_size = 32,
-    flags = { 'goes-to-quickbar' },
+    flags = { 'goes-to-main-inventory' },
     subgroup = 'raw-material',
     order = 'a[sapling]',
     place_result = 'sapling',
